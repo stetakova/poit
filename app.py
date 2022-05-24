@@ -58,7 +58,7 @@ def background_thread(args):
             if len (dataList)>0:
                 values = str(dataList).replace("'", "\"")
                 cursor = db.cursor()
-                query = "INSERT INTO graf (hodnoty) VALUES ('%s')" % (values)
+                query = "INSERT INTO graf (hodnoty) VALUES (%s)" % (values)
                 cursor.execute(query)
                 db.commit()
             

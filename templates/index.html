@@ -21,7 +21,7 @@
            var yAx = new Array();
            
           var gauge = new RadialGauge({
-          renderTo: 'canvasid',
+          renderTo: 'canvasID',
           width: 300,
           height: 300,
           units: "V",
@@ -66,7 +66,7 @@
          var layout = {
            xaxis: {title: "x"},
            yaxis: {title: "y"},
-           title: "data"
+           title: "Flow chart"
          };
       
          namespace = '/test';
@@ -112,7 +112,7 @@
            
          $('form#recordDb').submit(function(event) {
                   var layout = {
-          title: 'Vykreslenie priebehu',
+          title: 'Flow chart',
           xaxis: {
             title: 'count'
           },
@@ -156,7 +156,7 @@
       
       $('form#recordFile').submit(function(event) {
                   var layout = {
-          title: 'Vykreslenie priebehu',
+          title: 'Flow chart',
           xaxis: {
             title: 'count'
           },
@@ -219,10 +219,10 @@
       <div id="tabs">
          <ul>
             <li><a href="#tabs-1">LOG</a></li>
-            <li><a href="#tabs-2">GRAF</a></li>
-            <li><a href="#tabs-3">CIFERNIK</a></li>
-            <li><a href="#tabs-4">DB</a></li>
-            <li><a href="#tabs-5">FILE</a></li>
+            <li><a href="#tabs-2">GRAPH</a></li>
+            <li><a href="#tabs-3">DIAL</a></li>
+            <li><a href="#tabs-4">DATA FROM DATABASE IN GRAPH</a></li>
+            <li><a href="#tabs-5">DATA FROM FILE IN GRAPH</a></li>
          </ul>
          <div id="tabs-1">
             <h2>Receive:</h2>
@@ -232,11 +232,11 @@
             <div id="plotdiv" style="width:600px;height:250px;"></div>
          </div>
          <div id="tabs-3">
-            <canvas id="canvasid"></canvas>
+            <canvas id="canvasID"></canvas>
          </div>
          <div id="tabs-4">
             <form id = "recordDb" method="POST" action='#'>
-  <input type="text" name="value" id="valueDb" placeholder="cislo zaznamu v databaze">
+  <input type="text" name="value" id="valueDb" placeholder="Number of record in database">
   <input type="submit" value="Set">
 </form>
             
@@ -245,7 +245,7 @@
          
          <div id="tabs-5">
             <form id = "recordFile" method="POST" action='#'>
-  <input type="text" name="value" id="valueFile" placeholder="cislo riadku vo file">
+  <input type="text" name="value" id="valueFile" placeholder="Number of row in file">
   <input type="submit" value="Set">
 </form>
             <div id="plotdivRow" style="width:600px;height:250px;"></div>
