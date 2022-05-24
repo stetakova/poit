@@ -1,16 +1,13 @@
 #define vystup 3
 float value = 5;
-int setting = 0;
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(vystup, OUTPUT);
- 
+  pinMode(vystup, OUTPUT); 
 }
 
 void loop(){
-
   float voltage1, voltage2, value;
   int low=1;
   
@@ -28,7 +25,8 @@ void loop(){
   }
   delay(500);
   Serial.println(rozdiel);
-
   
- 
+ if(Serial.read() != -1){
+    value = Serial.read();
+  } 
 }
